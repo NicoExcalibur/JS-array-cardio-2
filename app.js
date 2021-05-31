@@ -24,10 +24,9 @@ const comments = [
 //   }
 // });
 // simpler way
-const isAdult = people.some((person) => {
-  const currentYear = new Date().getFullYear();
-  return currentYear - person.year >= 19;
-});
+const isAdult = people.some(
+  (person) => new Date().getFullYear() - person.year >= 19
+);
 
 console.log({ isAdult });
 
